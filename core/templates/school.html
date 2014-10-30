@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+ 
+ 	{% block content %}
+ <div class="jumbotron">
+ 	<div class="container">
+ 		<h1>{{school.name}}</h1>
+ 	</div>
+ </div>
+
+ <div class="container">
+ 	<div class="row">
+ 		{% for team in school.teams.all %}
+	 		<div class="col-xs-3">
+	 			<h3>{{team.name}}</h3>
+	 			<img src="{{team.logo}}">
+	 		</div>
+ 		{% endfor %}
+ 	</div>
+ </div>
+ 	{% endblock content %}
